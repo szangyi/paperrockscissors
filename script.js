@@ -12,7 +12,9 @@ let computerRandom
 
 function rock() {
     console.log("player selected rock");
-    document.querySelector("#player1").classList.add("playerrock");
+    document.querySelector("#player1>.image_rockhand").style.display = "block";
+    document.querySelector("#player1>.image_paperhand").style.display = "none";
+    document.querySelector("#player1>.image_scissorshand").style.display = "none";
     computerChoiceGenerator();
     playerChoice = rock;
     matchDecider();
@@ -21,6 +23,9 @@ function rock() {
 function paper() {
     console.log("player selected paper");
     document.querySelector("#player1").classList.add("playerpaper");
+    document.querySelector("#player1>.image_rockhand").style.display = "none";
+    document.querySelector("#player1>.image_paperhand").style.display = "block";
+    document.querySelector("#player1>.image_scissorshand").style.display = "none";
     computerChoiceGenerator();
     playerChoice = paper;
     matchDecider();
@@ -28,7 +33,9 @@ function paper() {
 
 function scissors() {
     console.log("player selected scissors");
-    document.querySelector("#player1").classList.add("playerscissors");
+    document.querySelector("#player1>.image_rockhand").style.display = "none";
+    document.querySelector("#player1>.image_paperhand").style.display = "none";
+    document.querySelector("#player1>.image_scissorshand").style.display = "block";
     computerChoiceGenerator();
     playerChoice = scissors;
     matchDecider();
@@ -41,20 +48,26 @@ function computerChoiceGenerator() {
 
     if (computerRandom == 1) {
         computerChoice = rock;
-        console.log("computer chose rock");
-        document.querySelector("#player2").classList.add("playerrock");
+        console.log("computer rock");
+        document.querySelector("#player2>.image_rockhand").style.display = "block";
+        document.querySelector("#player2>.image_paperhand").style.display = "none";
+        document.querySelector("#player2>.image_scissorshand").style.display = "none";
     }
 
     if (computerRandom == 2) {
         computerChoice = paper;
-        console.log("computer chose paper");
-        document.querySelector("#player2").classList.add("playerpaper");
+        console.log("computer paper");
+        document.querySelector("#player2>.image_rockhand").style.display = "none";
+        document.querySelector("#player2>.image_paperhand").style.display = "block";
+        document.querySelector("#player2>.image_scissorshand").style.display = "none";
     }
 
     if (computerRandom == 3) {
         computerChoice = scissors;
-        console.log("computer chose scissors");
-        document.querySelector("#player2").classList.add("playerscissors");
+        console.log("computer scissors");
+        document.querySelector("#player2>.image_rockhand").style.display = "none";
+        document.querySelector("#player2>.image_paperhand").style.display = "none";
+        document.querySelector("#player2>.image_scissorshand").style.display = "block";
     }
 }
 
@@ -100,23 +113,23 @@ function matchDecider() {
 function win() {
     console.log("you win!");
     alert("Congrats! You won!")
-    replay()
+    playAgain()
 }
 
 function loss() {
     console.log("you lost!");
     alert("Loser!")
-    replay()
+    playAgain()
 }
 
 function draw() {
     console.log("it's a draw");
     alert("It's a tie, try again!")
-    replay()
+    playAgain()
 }
 
-function replay() {
-    console.log("replaaaay");
+function playAgain() {
+    console.log("");
     document.querySelector("#rock").addEventListener("click", rock);
     document.querySelector("#paper").addEventListener("click", paper);
     document.querySelector("#scissors").addEventListener("click", scissors);

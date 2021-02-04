@@ -1,8 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400&display=swap');
 
+
+h1 {
+    font-family: 'Lemonada';
+    font-size: 3vw;
+    display: flex;
+    align-self: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.2vw;
+    align-self: center;
+    margin-top: 0;
+    /*    margin-bottom: 4vw;*/
+}
+
+
 body {
     font-family: 'Montserrat';
     font-weight: 100;
+}
+
+.headlines {
+    display: flex;
+    flex-direction: column;
+}
+
+.playername {
+    font-family: 'Lemonada';
+    font-size: 2vw;
+    align-self: center
 }
 
 .containers {
@@ -11,7 +40,6 @@ body {
 }
 
 .container {
-    background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +48,8 @@ body {
 .rockpaperscissorsgrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw
+    grid-gap: 2vw;
+    padding: 1.2vw 0;
 }
 
 #rock {
@@ -49,24 +78,24 @@ body {
 .image_rockhand {
     background-image: url(paperrockscissor/imgs/rockhand.png);
     background-size: cover;
-    width: 30vw;
-    height: 30vw;
-    /*    display: none;*/
+    width: 22vw;
+    height: 22vw;
+    display: none;
 }
 
 .image_paperhand {
     background-image: url(paperrockscissor/imgs/paperhand.png);
     background-size: cover;
     display: block;
-    width: 30vw;
-    height: 30vw;
+    width: 22vw;
+    height: 22vw;
     display: none;
 }
 
 .image_scissorshand {
     background-image: url(paperrockscissor/imgs/scissorshand.png);
     background-size: cover;
-    width: 30vw;
-    height: 30vw;
+    width: 22vw;
+    height: 22vw;
     display: none;
 }
