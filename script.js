@@ -68,7 +68,65 @@ function computerChoiceGenerator() {
 }
 
 
+function matchDecider() {
+
+    if (playerChoice == rock && computerChoice == rock){
+        draw()
+    }
+
+    if (playerChoice == rock && computerChoice == paper){
+        loss()
+    }
+
+    if (playerChoice == rock && computerChoice == scissors){
+        win()
+    }
+
+    if (playerChoice == paper && computerChoice == rock){
+        win()
+    }
+
+    if (playerChoice == paper && computerChoice == paper){
+        draw()
+    }
+
+    if (playerChoice == paper && computerChoice == scissors){
+        loss()
+    }
+    if (playerChoice == scissors && computerChoice == rock){
+        loss()
+    }
+
+    if (playerChoice == scissors && computerChoice == paper){
+        win()
+    }
+
+    if (playerChoice == scissors && computerChoice == scissors){
+        draw()
+    }
+}
 
 
+function win() {
+    console.log("you win!");
+    replay()
+}
+
+function loss() {
+    console.log("you lost!");
+    replay()
+}
+
+function draw() {
+    console.log("it's a draw");
+    replay()
+}
+
+function replay() {
+    console.log("replaaaay");
+     document.querySelector("rockbutton").addEventListener("click", rock);
+    document.querySelector("paperbutton").addEventListener("click", paper);
+    document.querySelector("scissorbutton").addEventListener("click", scissors);
+}
 
 
