@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>Paper-Rock-Scissor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,32 +13,32 @@
     <h1>Paper Rock Scissor</h1>
     <h2>Do you want to play a game?</h2>
     <div class="containers">
-        <div id="player1">
-            <div class="image1"></div>
+        <div class="container" id="player1">
+            <div class="image_rockhand"></div>
+            <div class="image_paperhand"></div>
+            <div class="image_scissorshand"></div>
             <div class="rockpaperscissorsgrid">
-                <div id="rock">rock</div>
-                <div id="paper">paper</div>
-                <div id="scissors">scissor</div>
+                <div id="rock"></div>
+                <div id="paper"></div>
+                <div id="scissors"></div>
             </div>
-            <div class="playername"></div>
+            <div class="playername">You</div>
         </div>
 
-        <div id="player2">
-            <div class="image2"></div>
-<!--
-            <div class="rockpaperscissorsgrid" style="visibility:hidden">
-                <div class="rock"></div>
-                <div class="paper"></div>
-                <div class="scissors"></div>
+        <div class="container" id="player2">
+            <div class="image_rockhand"></div>
+            <div class="image_paperhand"></div>
+            <div class="image_scissorshand"></div>
+            <div class="rockpaperscissorsgrid" style="visibility: hidden">
+                <div id="rock"></div>
+                <div id="paper"></div>
+                <div id="scissors"></div>
             </div>
--->
-            <div class="playername"></div>
+            <div class="playername">Computer</div>
         </div>
 
     </div>
 
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

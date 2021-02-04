@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 100;
+}
+
+.containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rockpaperscissorsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw
+}
+
+#rock {
+    background-image: url(paperrockscissor/imgs/rock.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+#paper {
+    background-image: url(paperrockscissor/imgs/paper.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+#scissors {
+    background-image: url(paperrockscissor/imgs/scissors.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.image_rockhand {
+    background-image: url(paperrockscissor/imgs/rockhand.png);
+    background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    /*    display: none;*/
+}
+
+.image_paperhand {
+    background-image: url(paperrockscissor/imgs/paperhand.png);
+    background-size: cover;
+    display: block;
+    width: 30vw;
+    height: 30vw;
+    display: none;
+}
+
+.image_scissorshand {
+    background-image: url(paperrockscissor/imgs/scissorshand.png);
+    background-size: cover;
+    width: 30vw;
+    height: 30vw;
+    display: none;
+}
