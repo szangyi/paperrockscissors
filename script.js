@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", start)
 
-function DOMContentLoaded() {
-    document.querySelector("rockbutton").addEventListener("click", rock);
-    document.querySelector("paperbutton").addEventListener("click", paper);
-    document.querySelector("scissorbutton").addEventListener("click", scissors);
+function start() {
+    document.querySelector("#rock").addEventListener("click", rock);
+    document.querySelector("#paper").addEventListener("click", paper);
+    document.querySelector("#scissors").addEventListener("click", scissors);
 }
 
 let playerChoice
@@ -16,9 +16,9 @@ function rock() {
     computerChoiceGenerator();
     playerChoice = rock;
     matchDecider();
-     document.querySelector("rockbutton").removeEventListener("click", rock);
-    document.querySelector("paperbutton").removeEventListener("click", paper);
-    document.querySelector("scissorbutton").removeEventListener("click", scissors);
+    document.querySelector("#rock").removeEventListener("click", rock);
+    document.querySelector("#paper").removeEventListener("click", paper);
+    document.querySelector("#scissors").removeEventListener("click", scissors);
 }
 
 function paper() {
@@ -27,9 +27,9 @@ function paper() {
     computerChoiceGenerator();
     playerChoice = paper;
     matchDecider();
-     document.querySelector("rockbutton").removeEventListener("click", rock);
-    document.querySelector("paperbutton").removeEventListener("click", paper);
-    document.querySelector("scissorbutton").removeEventListener("click", scissors);
+    document.querySelector("#rock").removeEventListener("click", rock);
+    document.querySelector("#paper").removeEventListener("click", paper);
+    document.querySelector("#scissors").removeEventListener("click", scissors);
 }
 
 function scissors() {
@@ -38,7 +38,7 @@ function scissors() {
     computerChoiceGenerator();
     playerChoice = scissors;
     matchDecider();
-     document.querySelector("rockbutton").removeEventListener("click", rock);
+    document.querySelector("#rock").removeEventListener("click", rock);
     document.querySelector("paperbutton").removeEventListener("click", paper);
     document.querySelector("scissorsbutton").removeEventListener("click", scissors);
 }
@@ -46,62 +46,68 @@ function scissors() {
 
 function computerChoiceGenerator() {
     console.log("computerchoice")
-     computerRandom = Math.floor(Math.random() * 3) + 1;
+    computerRandom = Math.floor(Math.random() * 3) + 1;
 
-    if (computerRandom ==1) {
+    if (computerRandom == 1) {
         computerChoice = rock;
         console.log("computer chose rock");
         document.querySelector("#player2").classList.add("playerrock");
     }
 
-     if (computerRandom ==2) {
+    if (computerRandom == 2) {
         computerChoice = paper;
         console.log("computer chose paper");
         document.querySelector("#player2").classList.add("playerpaper");
     }
 
-     if (computerRandom ==3) {
+    if (computerRandom == 3) {
         computerChoice = scissors;
         console.log("computer chose scissors");
         document.querySelector("#player2").classList.add("playerscissors");
     }
 }
 
+function replay() {
+    console.log("replaaaay");
+    document.querySelector("#rock").addEventListener("click", rock);
+    document.querySelector("#paper").addEventListener("click", paper);
+    document.querySelector("#scissors").addEventListener("click", scissors);
+}
 
 function matchDecider() {
 
-    if (playerChoice == rock && computerChoice == rock){
+    if (playerChoice == rock && computerChoice == rock) {
         draw()
     }
 
-    if (playerChoice == rock && computerChoice == paper){
+    if (playerChoice == rock && computerChoice == paper) {
         loss()
     }
 
-    if (playerChoice == rock && computerChoice == scissors){
+    if (playerChoice == rock && computerChoice == scissors) {
         win()
     }
 
-    if (playerChoice == paper && computerChoice == rock){
+    if (playerChoice == paper && computerChoice == rock) {
         win()
     }
 
-    if (playerChoice == paper && computerChoice == paper){
+    if (playerChoice == paper && computerChoice == paper) {
         draw()
     }
 
-    if (playerChoice == paper && computerChoice == scissors){
+    if (playerChoice == paper && computerChoice == scissors) {
         loss()
     }
-    if (playerChoice == scissors && computerChoice == rock){
+    if (playerChoice == scissors && computerChoice == rock) {
         loss()
     }
 
-    if (playerChoice == scissors && computerChoice == paper){
+    if (playerChoice == scissors && computerChoice == paper) {
         win()
     }
 
-    if (playerChoice == scissors && computerChoice == scissors){
+    if (playerChoice == scissors && computerChoice == scissors) {
         draw()
     }
 }
@@ -121,12 +127,4 @@ function draw() {
     console.log("it's a draw");
     replay()
 }
-
-function replay() {
-    console.log("replaaaay");
-     document.querySelector("rockbutton").addEventListener("click", rock);
-    document.querySelector("paperbutton").addEventListener("click", paper);
-    document.querySelector("scissorbutton").addEventListener("click", scissors);
-}
-
 
