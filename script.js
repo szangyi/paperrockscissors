@@ -16,9 +16,6 @@ function rock() {
     computerChoiceGenerator();
     playerChoice = rock;
     matchDecider();
-    document.querySelector("#rock").removeEventListener("click", rock);
-    document.querySelector("#paper").removeEventListener("click", paper);
-    document.querySelector("#scissors").removeEventListener("click", scissors);
 }
 
 function paper() {
@@ -27,9 +24,6 @@ function paper() {
     computerChoiceGenerator();
     playerChoice = paper;
     matchDecider();
-    document.querySelector("#rock").removeEventListener("click", rock);
-    document.querySelector("#paper").removeEventListener("click", paper);
-    document.querySelector("#scissors").removeEventListener("click", scissors);
 }
 
 function scissors() {
@@ -38,9 +32,6 @@ function scissors() {
     computerChoiceGenerator();
     playerChoice = scissors;
     matchDecider();
-    document.querySelector("#rock").removeEventListener("click", rock);
-    document.querySelector("paperbutton").removeEventListener("click", paper);
-    document.querySelector("scissorsbutton").removeEventListener("click", scissors);
 }
 
 
@@ -67,12 +58,6 @@ function computerChoiceGenerator() {
     }
 }
 
-function replay() {
-    console.log("replaaaay");
-    document.querySelector("#rock").addEventListener("click", rock);
-    document.querySelector("#paper").addEventListener("click", paper);
-    document.querySelector("#scissors").addEventListener("click", scissors);
-}
 
 function matchDecider() {
 
@@ -112,7 +97,6 @@ function matchDecider() {
     }
 }
 
-
 function win() {
     console.log("you win!");
     replay()
@@ -128,3 +112,9 @@ function draw() {
     replay()
 }
 
+function replay() {
+    console.log("replaaaay");
+    document.querySelector("#rock").addEventListener("click", rock);
+    document.querySelector("#paper").addEventListener("click", paper);
+    document.querySelector("#scissors").addEventListener("click", scissors);
+}
