@@ -99,16 +99,19 @@ function matchDecider() {
 
 function win() {
     console.log("you win!");
+    alert("Congrats! You won!")
     replay()
 }
 
 function loss() {
     console.log("you lost!");
+    alert("Loser!")
     replay()
 }
 
 function draw() {
     console.log("it's a draw");
+    alert("It's a tie, try again!")
     replay()
 }
 
