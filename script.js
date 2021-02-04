@@ -12,6 +12,7 @@ let computerRandom
 
 function rock() {
     console.log("player selected rock");
+    document.querySelector("#player1>.image_blank").style.display = "none";
     document.querySelector("#player1>.image_rockhand").style.display = "block";
     document.querySelector("#player1>.image_paperhand").style.display = "none";
     document.querySelector("#player1>.image_scissorshand").style.display = "none";
@@ -23,6 +24,7 @@ function rock() {
 function paper() {
     console.log("player selected paper");
     document.querySelector("#player1").classList.add("playerpaper");
+    document.querySelector("#player1>.image_blank").style.display = "none";
     document.querySelector("#player1>.image_rockhand").style.display = "none";
     document.querySelector("#player1>.image_paperhand").style.display = "block";
     document.querySelector("#player1>.image_scissorshand").style.display = "none";
@@ -33,6 +35,7 @@ function paper() {
 
 function scissors() {
     console.log("player selected scissors");
+    document.querySelector("#player1>.image_blank").style.display = "none";
     document.querySelector("#player1>.image_rockhand").style.display = "none";
     document.querySelector("#player1>.image_paperhand").style.display = "none";
     document.querySelector("#player1>.image_scissorshand").style.display = "block";
@@ -49,6 +52,7 @@ function computerChoiceGenerator() {
     if (computerRandom == 1) {
         computerChoice = rock;
         console.log("computer rock");
+        document.querySelector("#player2>.image_blank").style.display = "none";
         document.querySelector("#player2>.image_rockhand").style.display = "block";
         document.querySelector("#player2>.image_paperhand").style.display = "none";
         document.querySelector("#player2>.image_scissorshand").style.display = "none";
@@ -57,6 +61,7 @@ function computerChoiceGenerator() {
     if (computerRandom == 2) {
         computerChoice = paper;
         console.log("computer paper");
+        document.querySelector("#player2>.image_blank").style.display = "none";
         document.querySelector("#player2>.image_rockhand").style.display = "none";
         document.querySelector("#player2>.image_paperhand").style.display = "block";
         document.querySelector("#player2>.image_scissorshand").style.display = "none";
@@ -65,6 +70,7 @@ function computerChoiceGenerator() {
     if (computerRandom == 3) {
         computerChoice = scissors;
         console.log("computer scissors");
+        document.querySelector("#player2>.image_blank").style.display = "none";
         document.querySelector("#player2>.image_rockhand").style.display = "none";
         document.querySelector("#player2>.image_paperhand").style.display = "none";
         document.querySelector("#player2>.image_scissorshand").style.display = "block";
@@ -112,24 +118,46 @@ function matchDecider() {
 
 function win() {
     console.log("you win!");
-    alert("Congrats! You won!")
-    playAgain()
+//    alert("Congrats! You won!");
+    document.querySelector(".modal").style.display = "block"
+    document.querySelector(".game_text").innerHTML = "Congrats! You won!";
+    showResult()
 }
 
 function loss() {
     console.log("you lost!");
-    alert("Loser!")
-    playAgain()
+//    alert("Loser!")
+    document.querySelector(".modal").style.display = "block"
+    document.querySelector(".game_text").innerHTML = "Loser!";
+    showResult()
 }
 
 function draw() {
     console.log("it's a draw");
-    alert("It's a tie, try again!")
-    playAgain()
+//    alert("It's a tie, try again!")
+    document.querySelector(".modal").style.display = "block"
+      document.querySelector(".game_text").innerHTML = "It's a tie, try again!";
+    showResult()
+}
+
+function showResult() {
+     document.querySelector(".modal").addEventListener("click", playAgain)
 }
 
 function playAgain() {
     console.log("");
+     document.querySelector("#player1>.image_blank").style.display = "block";
+    document.querySelector("#player1>.image_scissorshand").style.display = "none";
+    document.querySelector("#player1>.image_paperhand").style.display = "none";
+    document.querySelector("#player1>.image_rockhand").style.display = "none";
+
+     document.querySelector("#player2>.image_blank").style.display = "block";
+    document.querySelector("#player2>.image_scissorshand").style.display = "none";
+    document.querySelector("#player2>.image_paperhand").style.display = "none";
+    document.querySelector("#player2>.image_rockhand").style.display = "none";
+
+
+    document.querySelector(".modal").style.display = "none"
     document.querySelector("#rock").addEventListener("click", rock);
     document.querySelector("#paper").addEventListener("click", paper);
     document.querySelector("#scissors").addEventListener("click", scissors);
