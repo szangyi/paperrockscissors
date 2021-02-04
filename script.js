@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", start)
 function DOMContentLoaded() {
     document.querySelector("rockbutton").addEventListener("click", rock);
     document.querySelector("paperbutton").addEventListener("click", paper);
-    document.querySelector("scissorbutton").addEventListener("click", scissor);
+    document.querySelector("scissorbutton").addEventListener("click", scissors);
 }
 
 let playerChoice
@@ -32,13 +32,43 @@ function paper() {
     document.querySelector("scissorbutton").removeEventListener("click", scissors);
 }
 
-function scissor() {
-    console.log("player selected scissor");
-    document.querySelector("#player1").classList.add("playerscissor");
+function scissors() {
+    console.log("player selected scissors");
+    document.querySelector("#player1").classList.add("playerscissors");
     computerChoiceGenerator();
-    playerChoice = scissor;
+    playerChoice = scissors;
     matchDecider();
      document.querySelector("rockbutton").removeEventListener("click", rock);
     document.querySelector("paperbutton").removeEventListener("click", paper);
-    document.querySelector("scissorbutton").removeEventListener("click", scissors);
+    document.querySelector("scissorsbutton").removeEventListener("click", scissors);
 }
+
+
+function computerChoiceGenerator() {
+    console.log("computerchoice")
+     computerRandom = Math.floor(Math.random() * 3) + 1;
+
+    if (computerRandom ==1) {
+        computerChoice = rock;
+        console.log("computer chose rock");
+        document.querySelector("#player2").classList.add("playerrock");
+    }
+
+     if (computerRandom ==2) {
+        computerChoice = paper;
+        console.log("computer chose paper");
+        document.querySelector("#player2").classList.add("playerpaper");
+    }
+
+     if (computerRandom ==3) {
+        computerChoice = scissors;
+        console.log("computer chose scissors");
+        document.querySelector("#player2").classList.add("playerscissors");
+    }
+}
+
+
+
+
+
+
