@@ -1,130 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400&display=swap");
 
 h1 {
-    font-family: 'Lemonada';
-    font-size: 3vw;
-    display: flex;
-    align-self: center;
-    padding-bottom: 0;
-    margin-bottom: 0;
+  font-family: "Lemonada";
+  font-size: 3vw;
+  display: flex;
+  align-self: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 h2 {
-    font-size: 1.7vw;
-    align-self: center;
-    margin-top: 0;
-    /*    margin-bottom: 4vw;*/
+  font-size: 1.7vw;
+  align-self: center;
+  margin-top: 0;
+  /*    margin-bottom: 4vw;*/
 }
 
-
 body {
-    font-family: 'Montserrat';
-    font-weight: 100;
+  font-family: "Montserrat";
+  font-weight: 100;
 }
 
 .headlines {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .playername {
-    font-family: 'Lemonada';
-    font-size: 2vw;
-    align-self: center
+  font-family: "Lemonada";
+  font-size: 2vw;
+  align-self: center;
 }
 
 .containers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rockpaperscissorsgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2vw;
-    padding: 1.2vw 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+  padding: 1.2vw 0;
 }
 
 #rock {
-    background-image: url(paperrockscissor/imgs/rock.png);
-    background-size: cover;
-    width: 80px;
-    height: 80px;
+  background-image: url(imgs/rock.png);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
 }
 
 #paper {
-    background-image: url(paperrockscissor/imgs/paper.png);
-    background-size: cover;
-    width: 80px;
-    height: 80px;
+  background-image: url(imgs/paper.png);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
 }
 
 #scissors {
-    background-image: url(paperrockscissor/imgs/scissors.png);
-    background-size: cover;
-    width: 80px;
-    height: 80px;
+  background-image: url(imgs/scissors.png);
+  background-size: cover;
+  width: 80px;
+  height: 80px;
 }
 
-#player1 {}
+#player1 {
+}
 
 .image_blank {
-    background-image: url(paperrockscissor/imgs/rockhand.png);
-    background-size: cover;
-    width: 22vw;
-    height: 22vw;
-    visibility: hidden
+  background-image: url(imgs/rockhand.png);
+  background-size: cover;
+  width: 22vw;
+  height: 22vw;
+  visibility: hidden;
 }
 
-
 .image_rockhand {
-    background-image: url(paperrockscissor/imgs/rockhand.png);
-    background-size: cover;
-    width: 22vw;
-    height: 22vw;
-    display: none;
+  background-image: url(imgs/rockhand.png);
+  background-size: cover;
+  width: 22vw;
+  height: 22vw;
+  display: none;
 }
 
 .image_paperhand {
-    background-image: url(paperrockscissor/imgs/paperhand.png);
-    background-size: cover;
-    display: block;
-    width: 22vw;
-    height: 22vw;
-    display: none;
+  background-image: url(imgs/paperhand.png);
+  background-size: cover;
+  display: block;
+  width: 22vw;
+  height: 22vw;
+  display: none;
 }
 
 .image_scissorshand {
-    background-image: url(paperrockscissor/imgs/scissorshand.png);
-    background-size: cover;
-    width: 22vw;
-    height: 22vw;
-    display: none;
+  background-image: url(imgs/scissorshand.png);
+  background-size: cover;
+  width: 22vw;
+  height: 22vw;
+  display: none;
 }
 
 .modalcontainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.buttontext{
-    text-decoration: underline
+.buttontext {
+  text-decoration: underline;
 }
 .modal {
-    display: none;
-    align-self: center;
-    background-color: black;
-    width: 25vw;
-    height: content;
-    position: absolute;
-    top: 20vw;
-    color: white;
-    font-weight: 500;
-    text-align: center;
+  display: none;
+  align-self: center;
+  background-color: black;
+  width: 25vw;
+  height: content;
+  position: absolute;
+  top: 20vw;
+  color: white;
+  font-weight: 500;
+  text-align: center;
 }
